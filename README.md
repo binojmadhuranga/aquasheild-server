@@ -7,7 +7,7 @@ It handles device data, user authentication, and communication between IoT devic
 
 - **Node.js**
 - **Express.js**
-- **MongoDB / MySQL** (choose based on your setup)
+- **MongoDB** 
 - **JWT Authentication**
 - **REST API**
 
@@ -21,14 +21,3 @@ It handles device data, user authentication, and communication between IoT devic
 - Secure APIs using JWT
 
 ## 📁 Project Structure
-
-skysense-server/
-├── src/
-│ ├── controllers/
-│ ├── routes/
-│ ├── models/
-│ ├── middleware/
-│ └── app.js
-├── .env
-├── package.json
-└── server.js
