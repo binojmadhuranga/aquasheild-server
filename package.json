@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "SkySense Server is the backend service for the **SkySense IoT platform**.  \r It handles device data, user authentication, and communication between IoT devices and the mobile/web application.",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+"scripts": {
+  "dev": "nodemon --exec ts-node src/server.ts",
+  "build": "tsc",
+  "start": "node dist/server.js"
+}
+,
   "repository": {
     "type": "git",
     "url": "git+https://github.com/binojmadhuranga/skysense-server.git"
@@ -28,6 +31,7 @@
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^25.0.9",
