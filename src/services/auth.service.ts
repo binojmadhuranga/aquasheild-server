@@ -1,8 +1,6 @@
 import User from "../models/User";
 import bcrypt from "bcryptjs";
-import jwt from "jsonwebtoken";
-const JWT_SECRET = process.env.JWT_SECRET!;
-const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN!;
+import { generateToken } from "../config/jwt.config";
 
 export const registerUser = async (
   name: string,
@@ -36,13 +34,8 @@ export const loginUser = async (email: string, password: string) => {
     throw new Error("Invalid credentials");
   }
 
-const token = jwt.sign(
-  { id: user._id.toString() },
-  JWT_SECRET,
-  {
-    expiresIn: JWT_EXPIRES_IN as jwt.SignOptions["expiresIn"],
-  }
-);
+  // 🔐 JWT creation moved to config
+  const token = generateToken({ id: user._id.toString() });
 
   return { user, token };
 };
