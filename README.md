@@ -1,6 +1,6 @@
-﻿# SkySense Server 
+﻿# AquaShield Server 
 
-SkySense Server is the backend service for the **SkySense IoT platform**.  
+AquaShield Server is the backend service for the **AquaShield IoT platform**.  
 It handles device data, user authentication, and communication between IoT devices and the mobile/web application.
 
 ##  Tech Stack
@@ -99,7 +99,7 @@ server/
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/binojmadhuranga/skysense-server.git
+git clone https://github.com/binojmadhuranga/AquaShield-server.git
 cd server
 ```
 
@@ -111,7 +111,7 @@ npm install
 3. Create a ```.env``` file in the root directory:
 ```env
 PORT=3000
-MONGODB_URI=mongodb://localhost:27017/skysense
+MONGODB_URI=mongodb://localhost:27017/AquaShield
 JWT_SECRET=your_jwt_secret_key
 NODE_ENV=development
 ```
@@ -149,7 +149,7 @@ Create a ```.env``` file with the following variables:
 
 ```env
 PORT=3000
-MONGODB_URI=mongodb://localhost:27017/skysense
+MONGODB_URI=mongodb://localhost:27017/AquaShield
 JWT_SECRET=your_secure_secret_key
 JWT_EXPIRE=7d
 NODE_ENV=development
